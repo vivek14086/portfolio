@@ -1,0 +1,324 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #080d1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+html {
+    scroll-padding-top: 85px;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #10182a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #263650;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(
+        135deg,
+        #080d1a,
+        #172554,
+        #0c2345
+    );
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 65px);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero h2 {
+    color: #cbd5e1;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 600px;
+    color: #94a3b8;
+    margin: 15px 0 30px;
+    font-size: 17px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    background: #0284c7;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.25);
+}
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    color: #38bdf8;
+    margin-bottom: 40px;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(210px, 1fr)
+    );
+    gap: 22px;
+}
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(210px, 1fr)
+    );
+    gap: 22px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: #131f35;
+    padding: 28px;
+    text-align: center;
+    border: 1px solid #263650;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    color: #38bdf8;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #94a3b8;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    margin-top: 25px;
+}
+
+.social-links a {
+    color: #38bdf8;
+    text-decoration: none;
+    margin: 0 12px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #10182a;
+    text-align: center;
+    padding: 22px;
+    color: #94a3b8;
+    border-top: 1px solid #263650;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 650px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 5%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .skills-container,
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   SMALL MOBILE DEVICES
+========================= */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+}
