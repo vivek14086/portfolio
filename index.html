@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My personal web developer portfolio">
+    <title>My Portfolio | Web Developer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #080d1a;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #10182a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 22px;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #080d1a, #172554);
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 7vw, 65px);
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            color: #cbd5e1;
+            margin: 10px 0;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: #94a3b8;
+            margin: 15px 0 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+            transform: translateY(-4px);
+        }
+
+        /* COMMON SECTIONS */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            color: #38bdf8;
+            margin-bottom: 40px;
+        }
+
+        /* ABOUT */
+        .about {
+            max-width: 800px;
+            text-align: center;
+            margin: auto;
+            color: #cbd5e1;
+        }
+
+        /* SKILLS */
+        .skills-container,
+        .projects-container {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(210px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: #131f35;
+            padding: 28px;
+            text-align: center;
+            border: 1px solid #263650;
+            border-radius: 12px;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #94a3b8;
+            margin-bottom: 18px;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            margin-bottom: 25px;
+        }
+
+        .social-links {
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            color: #38bdf8;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #10182a;
+            text-align: center;
+            padding: 22px;
+            color: #94a3b8;
+        }
+
+        /* MOBILE */
+        @media(max-width: 650px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+                font-size: 14px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="logo">MyPortfolio.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <h1>Hello, I'm <span>Your Name</span></h1>
+
+        <h2>Aspiring Web Developer</h2>
+
+        <p>
+            Welcome to my portfolio! I am passionate about
+            designing and developing modern websites.
+            I love learning new technologies and creating
+            beautiful digital experiences.
+        </p>
+
+        <a href="#projects" class="btn">
+            Explore My Work
+        </a>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+            <p>
+                I am an aspiring web developer with an interest
+                in frontend development. I have experience
+                learning HTML, CSS and JavaScript through
+                practice and personal projects.
+
+                I enjoy solving problems, improving my coding
+                skills and building responsive websites.
+                My goal is to secure a web development internship
+                and grow as a professional developer.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="card">
+                <h3>HTML5</h3>
+                <p>Website structure and semantic elements.</p>
+            </div>
+
+            <div class="card">
+                <h3>CSS3</h3>
+                <p>Responsive layouts and modern styling.</p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Interactive website functionality.</p>
+            </div>
+
+            <div class="card">
+                <h3>Git & GitHub</h3>
+                <p>Version control and collaboration.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>
+                    A responsive personal website
+                    showcasing my skills and work.
+                </p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <div class="card">
+                <h3>To-Do List App</h3>
+                <p>
+                    A simple task manager built
+                    using HTML, CSS and JavaScript.
+                </p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <div class="card">
+                <h3>Weather Application</h3>
+                <p>
+                    A weather application displaying
+                    real-time information using an API.
+                </p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>
+            I am open to internship opportunities
+            and exciting collaborations.
+        </p>
+
+        <a href="mailto:your-email@example.com" class="btn">
+            Get In Touch
+        </a>
+
+        <div class="social-links">
+
+            <a href="https://github.com/YOUR_USERNAME"
+               target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            <a href="https://linkedin.com/in/YOUR_USERNAME"
+               target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
